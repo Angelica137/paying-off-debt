@@ -49,3 +49,11 @@ What is a good upper bound? Imagine that instead of paying monthly, we paid off 
 Write a program that uses these bounds and bisection search to find the smallest monthly payment to the cent (no more multiples of \$10) such that we can pay off the debt within a year. Try it out with large inputs, and notice how fast it is (try the same large inputs in your solution to Problem 2 to compare!). Produce the same return value as you did in Problem 2.
 
 The code must run in under 30 seconds
+
+## Solution
+
+### User story
+
+As a credi card user,
+I want to know how my balance will change each month of the next year, if I pay the minimum payment each month,
+So that I know what to expect at the end of the year

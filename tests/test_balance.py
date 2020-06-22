@@ -2,8 +2,9 @@ from scripts.balance import Balance
 
 
 def test_constructor():
-    b = Balance()
-    assert 1 == 2
+    b = Balance(42)
+    assert isinstance(b, Balance)
+    assert b.outsBalance == 42
 
 
 """

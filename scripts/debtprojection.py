@@ -23,9 +23,11 @@ class DebtProjection:
 
     def getMinMonPmt(self, balance, minMonthPymtRate):
         minPmtThisnMonth = MinMonthPymt(balance, minMonthPymtRate)
-        return minPmtThisnMonth.calcMinMonPymt(minMonthPymtRate, balance)
+        self._minPmtThisMonth = minPmtThisnMonth.calcMinMonPymt(
+            minMonthPymtRate, balance)
+        return self._minPmtThisMonth
 
-    def getMonUnpaidBalance(slef, balance, minPmtThisMonth):
+    def getMonUnpaidBalance(self, balance, minPmtThisMonth):
         return self._balance - self._minPmtThisMonth
 
     # def getNextMonthBalance():

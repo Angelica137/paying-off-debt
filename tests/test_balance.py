@@ -1,7 +1,4 @@
 from scripts.balance import Balance
-from scripts.balance import MinMonthPymt
-from scripts.balance import MonthUnpaidBalance
-from scripts.balance import MonthlyIntRate
 
 
 def test_constructor():
@@ -12,21 +9,6 @@ def test_constructor():
 def test_calcOutsBalance():
     b = Balance(42, 40.32, 0.2/12)
     assert b.calcOutsBalance() == 40.99
-
-
-def test_calculate_min_monthly_payment():
-    minMoPmt = MinMonthPymt(0.04, 42)
-    assert minMoPmt.calcMinMonPymt(0.04, 42) == 1.68
-
-
-def test_calculate_min_unpaid_balance():
-    mub = MonthUnpaidBalance(42, 1.68)
-    assert mub.calcMonthUnpaidBalance(42, 1.68) == 40.32
-
-
-def test_month_int_rate():
-    monthRate = MonthlyIntRate(0.2)
-    assert monthRate.calcMonthRate() == 0.2 / 12
 
 
 """

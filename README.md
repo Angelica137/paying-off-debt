@@ -2,7 +2,7 @@
 
 This is problem set 2 of MITx 600
 
-### Problem 1 - Paying Debt off in a Year
+### Problem 1 - Paying minimum monthly paymnet
 
 Write a program to calculate the credit card balance after one year if a person only pays the minimum monthly payment required by the credit card company each month.
 

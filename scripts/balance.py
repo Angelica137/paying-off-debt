@@ -1,15 +1,13 @@
 class Balance:
-    def __init__(self, outsBalance):
+    def __init__(self, outsBalance, monthUnpaidBalance, monthRate):
         self._outsBalance = outsBalance
+        self._monthUnpaidBalance = monthUnpaidBalance
+        self._monthRate = monthRate
 
-
-"""
     def calcOutsBalance(self):
-        self._outsBalance = MUP + MIR*MUP
-
-    def getOutsBalance(self):
-        return self._outsBalance
-"""
+        self._outsBalance = self._monthUnpaidBalance + \
+            (self._monthRate * self._monthUnpaidBalance)
+        return round(self._outsBalance, 2)
 
 
 class MinMonthPymt:
@@ -30,9 +28,9 @@ class MonthUnpaidBalance:
         return self._balance - self._minMonthPymt
 
 
-class MonthlyInt:
+class MonthlyIntRate:
     def __init__(self, intAnnual):
         self._intAnnual = intAnnual
 
-    def calcIntMonth(self):
+    def calcMonthRate(self):
         return self._intAnnual / 12

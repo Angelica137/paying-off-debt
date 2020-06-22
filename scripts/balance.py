@@ -21,6 +21,15 @@ class MinMonthPymt:
         return self._minMonthPymtRate * self._balance
 
 
+class MonthUnpaidBalance:
+    def __init__(self, balance, minMonthPymt):
+        self._balance = balance
+        self._minMonthPymt = minMonthPymt
+
+    def calcMonthUnpaidBalance(self, balance, minMonthPymt):
+        return self._balance - self._minMonthPymt
+
+
 """
 class MonthlyInt:
     def __int__(self, intAnnual):

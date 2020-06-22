@@ -1,6 +1,7 @@
 from scripts.balance import Balance
 from scripts.balance import MinMonthPymt
 from scripts.balance import MonthUnpaidBalance
+from scripts.balance import MonthlyInt
 
 
 def test_constructor():
@@ -25,16 +26,21 @@ def test_calculate_min_unpaid_balance():
     assert mub.calcMonthUnpaidBalance(42, 1.68) == 40.32
 
 
+def test_month_int_rate():
+    monthRate = MonthlyInt(0.2)
+    assert monthRate.calcIntMonth() == 0.2 / 12
+
+
 """
  # Test Case 1:
 	      balance = 42
 	      annualInterestRate = 0.2
 	      monthlyPaymentRate = 0.04
-	      
+
 	      # Result Your Code Should Generate Below:
 	      Remaining balance: 31.38
-                    
-          # To make sure you are doing calculation correctly, this is the 
+
+          # To make sure you are doing calculation correctly, this is the
           # remaining balance you should be getting at each month for this example
             Month 1 Remaining balance: 40.99
             Month 2 Remaining balance: 40.01
@@ -54,7 +60,7 @@ def test_calculate_min_unpaid_balance():
 	      balance = 484
 	      annualInterestRate = 0.2
 	      monthlyPaymentRate = 0.04
-	      
+
 	      Result Your Code Should Generate Below:
 	      Remaining balance: 361.61
 """

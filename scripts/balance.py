@@ -30,11 +30,9 @@ class MonthUnpaidBalance:
         return self._balance - self._minMonthPymt
 
 
-"""
 class MonthlyInt:
-    def __int__(self, intAnnual):
+    def __init__(self, intAnnual):
         self._intAnnual = intAnnual
 
-    def intMonth(self):
-        intMonth = self._intAnnual / 12
-"""
+    def calcIntMonth(self):
+        return self._intAnnual / 12

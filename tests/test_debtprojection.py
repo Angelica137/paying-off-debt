@@ -18,3 +18,6 @@ def test_next_month_balance():
     projection1.getMonUnpaidBalance(42, 1.68)
     projection1.monthlyIntRate(0.2)
     assert projection1.getNextMonthBalance(40.32, 0.0166666) == 40.99
+
+
+def test_print_projection_next_12_months():

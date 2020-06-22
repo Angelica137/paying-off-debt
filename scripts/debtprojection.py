@@ -1,5 +1,5 @@
-from scripts.minmonthpymt import MinMonthPymt
-from scripts.monthintrate import MonthlyIntRate
+from minmonthpymt import MinMonthPymt
+from monthintrate import MonthlyIntRate
 
 
 class DebtProjection:
@@ -31,13 +31,21 @@ class DebtProjection:
             (self._monthlyInt * self._unpaidBalance)
         return round(self._balance, 2)
 
-        # def TwelveMonthProjection()
+    def twelveMonthProjection(self, unpaidBlalance, monthlyInt):
+        month = 0
+        while month < 12:
+            self._balance = self._unpaidBalance + \
+                (self._monthlyInt * self._unpaidBalance)
+            month += 1
+            print("hello")
+            # return round(self._balance, 2)
 
 
 projection1 = DebtProjection(42, 0.04)
 print(projection1._balance)
-print(projection1.getMinMonPmt(42, 0.04))
-print(projection1.getMonUnpaidBalance(42, 1.68))
-print(projection1._unpaidBalance)
-print(projection1.monthlyIntRate(0.2))
-print(projection1.getNextMonthBalance(40.32, 0.2/12))
+projection1.getMinMonPmt(42, 0.04)
+projection1.getMonUnpaidBalance(42, 1.68)
+projection1._unpaidBalance
+projection1.monthlyIntRate(0.2)
+
+print(projection1.twelveMonthProjection(40.32, 0.2/12))

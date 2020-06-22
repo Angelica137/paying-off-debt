@@ -1,10 +1,22 @@
 from scripts.balance import Balance
+from scripts.balance import MinMonthPymt
 
 
 def test_constructor():
     b = Balance(42)
-    assert isinstance(b, Balance)
-    assert b.outsBalance == 42
+    assert b._outsBalance == 42
+
+
+"""
+def test_calcOutsBalance():
+    b = Balance(42)
+    assert b.calcOutsBalance() == 4
+"""
+
+
+def test_calculate_minim_monthly_payment():
+    minMoPmt = MinMonthPymt(0.04, 42)
+    assert minMoPmt.calcMinMonPymt(0.04, 42) == 1.68
 
 
 """

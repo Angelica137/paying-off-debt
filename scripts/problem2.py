@@ -15,6 +15,6 @@ while outsBalance > 0:
             (monthlyInterestRate * monthUnpaidBalance)
         outsBalance = updatedBalance
         month += 1
-    outsBalance = round(outsBalance, 2)
+    outsBalance = round(outsBalance)
 
-print(monthlyPayment)
+print("Lowest Payment: " + str(monthlyPayment))

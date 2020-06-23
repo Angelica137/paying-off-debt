@@ -23,7 +23,7 @@ class TwelveMonthProjection:
             month += 1
             print("Month " + str(month) +
                   " Remaining balance: " + str(formatBalance))
-            print("Remaining balance: " + str(formatBalance))
+        print("Remaining balance: " + str(formatBalance))
 
 
 balance = 42
@@ -31,3 +31,15 @@ annualInterestRate = 0.2
 monthlyPaymentRate = 0.04
 p = TwelveMonthProjection(42, 0.04)
 print(p.runProjection(42, 0.04, 1.68, 0.2, 40.32))
+
+balance = 42
+annualInterestRate = 0.2
+monthlyPaymentRate = 0.04
+month = 0
+while month < 12:
+    minMonthPmt = monthlyPaymentRate * balance
+    monthUnpaidBal = balance - minMonthPmt
+    newBal = monthUnpaidBal + (annualInterestRate/12)*monthUnpaidBal
+    balance = round(newBal, 2)
+    month += 1
+print("Remaining balance: " + str(balance))

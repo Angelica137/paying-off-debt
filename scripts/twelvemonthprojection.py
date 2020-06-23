@@ -19,5 +19,15 @@ class TwelveMonthProjection:
             monthlyInt = debtProjection.monthlyIntRate(annualInt)
             balance = debtProjection.getNextMonthBalance(
                 unpaidBlalance, monthlyInt)
+            formatBalance = round(balance, 2)
             month += 1
-            print(round(balance, 2))
+            print("Month " + str(month) +
+                  " Remaining balance: " + str(formatBalance))
+            print("Remaining balance: " + str(formatBalance))
+
+
+balance = 42
+annualInterestRate = 0.2
+monthlyPaymentRate = 0.04
+p = TwelveMonthProjection(42, 0.04)
+print(p.runProjection(42, 0.04, 1.68, 0.2, 40.32))

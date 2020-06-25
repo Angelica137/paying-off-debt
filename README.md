@@ -50,6 +50,7 @@ Write a program that uses these bounds and bisection search to find the smallest
 
 The code must run in under 30 seconds
 
+
 ### Developer notes
 
 To be able to solve problem 3 i had to use an epsilon to avoid going into an infinite loop.

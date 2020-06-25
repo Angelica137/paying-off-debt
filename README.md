@@ -50,10 +50,21 @@ Write a program that uses these bounds and bisection search to find the smallest
 
 The code must run in under 30 seconds
 
-## Solution
 
-### User story
+### Developer notes
 
-As a credi card user,
-I want to know how my balance will change each month of the next year, if I pay the minimum payment each month,
-So that I know what to expect at the end of the year
+To be able to solve problem 3 i had to use an epsilon to avoid going into an infinite loop.
+
+I left the notes of the solution to remember how I went about this.
+
+I used the below resources to understand this limit
+
+http://www.mathcs.emory.edu/~cheung/Courses/170/Syllabus/07/bisection.html
+
+http://www2.hawaii.edu/~jmcfatri/math407/BisectionMethod.html#:~:text=The%20bisection%20method%20is%20a,the%20roots%20of%20a%20function.&text=(i.e.%20the%20function%20will%20cross%20zero%20somewhere%20in%20the%20interval).&text=2.&text=If%20the%20absolute%20value%20f,root%20to%20the%20desired%20precision.
+
+https://www.youtube.com/watch?v=dHDhHtw5B-A
+
+I really liked professor RobBob's explanation.
+
+👾🐍❤️
